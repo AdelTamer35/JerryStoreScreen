@@ -11,9 +11,9 @@
 
     <!-- App Bar -->
     <LinearLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -66,7 +66,7 @@
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/my_icon_button"
+                android:background="@drawable/my_icon_button_with_border"
                 android:contentDescription="@string/notification_button"
                 android:src="@drawable/ic_notification"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -90,5 +90,43 @@
 
 
     </LinearLayout>
+
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_12"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:drawableTint="#969799"
+            android:hint="@string/search_about_tom"
+            android:inputType="text"
+            android:padding="12dp" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/my_icon_button_normal"
+            android:contentDescription="@string/filter_button"
+            android:src="@drawable/ic_filter" />
+
+    </LinearLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
