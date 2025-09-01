@@ -94,6 +94,7 @@
 
     <!-- Search Bar -->
     <LinearLayout
+        android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -126,7 +127,82 @@
     </LinearLayout>
 
 
+    <!-- Promotion Banner -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="24dp"
+        android:background="@drawable/banner_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        tools:layout_editor_absoluteX="16dp">
 
+        <!-- Promotion Info -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/promotion_title"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/promotion_details"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:alpha="0.04"
+            android:background="@drawable/ellipse_shape"
+            android:rotationX="-22.19"
+            android:rotationY="218.28"
+            android:translationX="40dp"
+            android:translationY="-4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:alpha="0.04"
+            android:background="@drawable/ellipse_shape"
+            android:rotationX="-28.05"
+            android:rotationY="210.14"
+            android:translationX="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Banner Image -->
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="108dp"
+        android:contentDescription="@string/banner_image"
+        android:src="@drawable/img_banner"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

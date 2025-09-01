@@ -7,4 +7,7 @@
     <string name="profile">Profile</string>
     <string name="search_about_tom">Search about tom ...</string>
     <string name="filter_button">Filter Button</string>
+    <string name="promotion_details">Adopt Tom! (Free Fail-Free Guarantee)</string>
+    <string name="promotion_title">Buy 1 Tom and get 2 for free</string>
+    <string name="banner_image">Banner Image</string>
 </resources>
