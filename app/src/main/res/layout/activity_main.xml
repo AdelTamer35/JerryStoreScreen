@@ -129,15 +129,14 @@
 
     <!-- Promotion Banner -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/promotionBanner"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="24dp"
         android:background="@drawable/banner_background"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/search_bar">
 
         <!-- Promotion Info -->
         <LinearLayout
@@ -201,8 +200,42 @@
         android:layout_height="108dp"
         android:contentDescription="@string/banner_image"
         android:src="@drawable/img_banner"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout" />
+        app:layout_constraintBottom_toBottomOf="@+id/promotionBanner"
+        app:layout_constraintEnd_toEndOf="@+id/promotionBanner" />
+
+
+    <!-- Section Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/promotionBanner">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+            android:text="@string/cheap_tom_section"
+            android:textColor="#1F1F1E"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+            android:text="@string/view_all"
+            android:textColor="#03578A"
+            android:textSize="12sp"
+            app:drawableEndCompat="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
